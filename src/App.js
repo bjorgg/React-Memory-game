@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import MemoryGame from './Components/MemoryGame';
+// import EndGame from './Components/EndGame';
+import React, { useState, useEffect } from "react";
+import { useSpring, animated as a } from "react-spring";
 
 function App() {
+  const [score, setScore] = useState(0)
+
+  useEffect(() => {
+    // Loads when the game starts
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar text={score}/>
+
+      <button className="start-btn">Start game!</button>
+  
+      <MemoryGame/>
     </div>
   );
 }
