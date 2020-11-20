@@ -1,4 +1,4 @@
-import Cards from './Cards';
+import Card from './Card';
 import React, { useState, useEffect } from "react";
 
 function MemoryGame({score, setScore}) {
@@ -7,11 +7,10 @@ function MemoryGame({score, setScore}) {
     const [flippedIndexes, setFlippedIndexes] = useState([])
 
     return (
-        <>
-            <div>Game goes here</div>
+        <div id="cards">
 
-            <Cards/>
-        </>
+            <Card/>
+        </div>
 
     )
     

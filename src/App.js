@@ -1,10 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
 import MemoryGame from './Components/MemoryGame';
 // import EndGame from './Components/EndGame';
 import React, { useState, useEffect } from "react";
-import { useSpring, animated as a } from "react-spring";
 
 function App() {
   const [score, setScore] = useState(0)
