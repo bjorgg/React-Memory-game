@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
-import Images from "./Images";
 
 function Card({
     id,
-   // Images, // Image, shape or text ... <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    image, 
     game,
     flippedCount,
     setFlippedCount,
     flippedIndexes,
     setFlippedIndexes,
   }) {
-    // const [image, setImage] = useState([]) 
     const [flipped, set] = useState(false)
     const {transform, opacity} = useSpring({
     opacity: flipped ? 1 : 0,
@@ -20,45 +18,84 @@ function Card({
     })
 
     useEffect(() => {
-        console.log('Flipped Indexes Changed')
+      if (flippedIndexes[2] === true && flippedIndexes.indexOf(id) > -1) {
+        setTimeout(() => {
+          set(state => !state)
+          setFlippedCount(flippedCount + 1)
+          setFlippedIndexes([])
+        }, 1000)
+      } else if (flippedIndexes[2] === false && id === 0) {
+        setFlippedCount(flippedCount + 1)
+        setFlippedIndexes([])
+      }
     }, [flippedIndexes])
 
     const onCardClick = () => {
-        console.log('Card Clicked')
+      if (!game[id].flipped && flippedCount % 3 === 0) {
         set(state => !state)
+        setFlippedCount(flippedCount + 1)
+        const newIndexes = [...flippedIndexes]
+        newIndexes.push(id)
+        setFlippedIndexes(newIndexes)
+      } else if (
+        flippedCount % 3 === 1 &&
+        !game[id].flipped &&
+        flippedIndexes.indexOf(id) < 0
+      ) {
+        set(state => !state)
+        setFlippedCount(flippedCount + 1)
+        const newIndexes = [...flippedIndexes]
+        newIndexes.push(id)
+        setFlippedIndexes(newIndexes)
+      }
     }
     
     return (
-        <div onClick={onCardClick}>
-         
-          {Images
-            .sort(() => Math.random() - 0.5)
-            .map(({pic}) => {
-              return (
-                <div>
-                <a.div
-                className="c back"
-                style={{
-                  opacity: opacity.interpolate(o => 1 - o),
-                  transform,
-                }}
-              />
-              <a.div
-                className="c front"
-                style={{
-                  opacity,
-                  transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-                  background: `url(${pic})` 
-                }}
-              />
-              </div>
-              );
-            
-            })
-          }
-         
+      <div onClick={onCardClick}>      
+            <a.div
+              className="c back"
+              style={{
+                opacity: opacity.interpolate(o => 1 - o),
+                transform,
+              }}
+            />
+            <a.div
+              className="c front"
+              style={{
+                opacity,
+                transform: transform.interpolate(t => `${t} rotateX(180deg)`),
+                background: `url(${image})` 
+              }}
+            />
       </div>
       )
 }
 
 export default Card;
+
+
+// {Images
+//   .sort(() => Math.random() - 0.5)
+//   .map(({pic, name}) => {
+//     return (
+//       <div className="card" key={name}>
+//       <a.div
+//       className="c back"
+//       style={{
+//         opacity: opacity.interpolate(o => 1 - o),
+//         transform,
+//       }}
+//     />
+//     <a.div
+//       className="c front"
+//       style={{
+//         opacity,
+//         transform: transform.interpolate(t => `${t} rotateX(180deg)`),
+//         background: `url(${pic})` 
+//       }}
+//     />
+//     </div>
+//     );
+  
+//   })
+// }

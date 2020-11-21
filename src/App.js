@@ -1,23 +1,31 @@
 import './App.css';
-import Navbar from './Components/Navbar';
 import MemoryGame from './Components/MemoryGame';
-// import EndGame from './Components/EndGame';
 import React, { useState, useEffect } from "react";
 
 function App() {
+  const [options, setOptions] = useState(null)
   const [score, setScore] = useState(0)
 
-  useEffect(() => {
-    // Loads when the game starts
-  }, [])
+  // Counter for score
+  // Maybe skip the score for now
 
   return (
     <div className="App">
-      <Navbar text={score}/>
-
-      <button className="start-btn">Start game!</button>
+      <div className="navbar">
+            <div className="game-title">Memory</div>
+            <div className="score">Score: {score}</div> 
+      </div>
   
-      <MemoryGame/>
+      {options ? (
+        <MemoryGame
+          options={options}
+          setOptions={setOptions}
+          score={score}
+          setScore={setScore}
+        />
+      ) : (
+        <button className="start-btn" onClick={() => setOptions(12)}>Start a new game!</button>
+      )}
     </div>
   );
 }
