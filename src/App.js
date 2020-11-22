@@ -1,30 +1,27 @@
+// Importing css file, component and React Hook
 import './App.css';
 import MemoryGame from './Components/MemoryGame';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
+// In this function we pass in all components and then a function in index.js will render it to the DOM.
 function App() {
+  // Declare the options state variable
   const [options, setOptions] = useState(null)
-  const [score, setScore] = useState(0)
 
-  // Counter for score
-  // Maybe skip the score for now
-
+  // This is what the function returns to the DOM
   return (
     <div className="App">
       <div className="navbar">
-            <div className="game-title">Memory</div>
-            <div className="score">Score: {score}</div> 
+            <div>Memory game</div>
       </div>
-  
+      
       {options ? (
         <MemoryGame
           options={options}
           setOptions={setOptions}
-          score={score}
-          setScore={setScore}
         />
       ) : (
-        <button className="start-btn" onClick={() => setOptions(12)}>Start a new game!</button>
+        <button className="start-btn" onClick={() => setOptions(16)}>Start a new game!</button>
       )}
     </div>
   );
