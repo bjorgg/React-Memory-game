@@ -3,7 +3,7 @@
 This is a school project in using React. I created a simple memory card game. For this assignment I decided not to have any extra features as score, high score or difficulties. But it's possible to add later. You can play the game and start a new game, that's it. Everybody should now how to play memory so i won't explain it here. You can find comments in the JavaScript files.
 <br>
 <br>
-Here is a link to the live version: <>
+Here is a link to the live version: <https://bjorgg.github.io/React-Memory-game>
 <br>
 <br>
 
