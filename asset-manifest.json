@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/bjorgg/React-Memory-game/static/css/main.8c292006.chunk.css",
+    "main.js": "/bjorgg/React-Memory-game/static/js/main.74f940ac.chunk.js",
+    "main.js.map": "/bjorgg/React-Memory-game/static/js/main.74f940ac.chunk.js.map",
+    "runtime-main.js": "/bjorgg/React-Memory-game/static/js/runtime-main.4bbab722.js",
+    "runtime-main.js.map": "/bjorgg/React-Memory-game/static/js/runtime-main.4bbab722.js.map",
+    "static/js/2.c51dd131.chunk.js": "/bjorgg/React-Memory-game/static/js/2.c51dd131.chunk.js",
+    "static/js/2.c51dd131.chunk.js.map": "/bjorgg/React-Memory-game/static/js/2.c51dd131.chunk.js.map",
+    "static/js/3.8745d11c.chunk.js": "/bjorgg/React-Memory-game/static/js/3.8745d11c.chunk.js",
+    "static/js/3.8745d11c.chunk.js.map": "/bjorgg/React-Memory-game/static/js/3.8745d11c.chunk.js.map",
+    "index.html": "/bjorgg/React-Memory-game/index.html",
+    "static/css/main.8c292006.chunk.css.map": "/bjorgg/React-Memory-game/static/css/main.8c292006.chunk.css.map",
+    "static/js/2.c51dd131.chunk.js.LICENSE.txt": "/bjorgg/React-Memory-game/static/js/2.c51dd131.chunk.js.LICENSE.txt",
+    "static/media/img1.e993a073.svg": "/bjorgg/React-Memory-game/static/media/img1.e993a073.svg",
+    "static/media/img2.54802bad.svg": "/bjorgg/React-Memory-game/static/media/img2.54802bad.svg",
+    "static/media/img3.67ff6441.svg": "/bjorgg/React-Memory-game/static/media/img3.67ff6441.svg",
+    "static/media/img4.cd993bce.svg": "/bjorgg/React-Memory-game/static/media/img4.cd993bce.svg",
+    "static/media/img5.74273b14.svg": "/bjorgg/React-Memory-game/static/media/img5.74273b14.svg",
+    "static/media/img6.bead8327.svg": "/bjorgg/React-Memory-game/static/media/img6.bead8327.svg",
+    "static/media/img7.e65b3231.svg": "/bjorgg/React-Memory-game/static/media/img7.e65b3231.svg",
+    "static/media/img8.1c615606.svg": "/bjorgg/React-Memory-game/static/media/img8.1c615606.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4bbab722.js",
+    "static/js/2.c51dd131.chunk.js",
+    "static/css/main.8c292006.chunk.css",
+    "static/js/main.74f940ac.chunk.js"
+  ]
+}
