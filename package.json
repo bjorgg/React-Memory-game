@@ -2,7 +2,7 @@
   "name": "js_react_memory_game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/bjorgg/React-Memory-game",
+  "homepage": "https://bjorgg.github.io/React-Memory-game/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
